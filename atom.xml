@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-16T06:05:03.518Z</updated>
+  <updated>2019-08-27T09:29:53.326Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scrapy</title>
+    <link href="http://yoursite.com/2019/08/26/Scrapy/"/>
+    <id>http://yoursite.com/2019/08/26/Scrapy/</id>
+    <published>2019-08-26T03:46:31.000Z</published>
+    <updated>2019-08-27T09:29:53.326Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.项目命令（需要进入项目目录执行才可生效）<br>a.scrapy startproject &lt;项目名称&gt;<br>  eg.scrapy startproject my_crawler<br>  被成功执行后，项目结构为:<br>  my_crawler<br>  | —-my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> <em>.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |—-</em> <em>init</em> _.py<br>  |———scrapy.cfg  Scrapy运行配置<br>b.scrapy crawl &lt;蜘蛛名&gt; - 使用指定的蜘蛛执行爬取,打印到终端<br>c.scrapy genspider [-t 模板名]&lt;蜘蛛名&gt;&lt;域&gt;<br>  eg.scrapy genspider news <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a><br>  执行成功后会在[项目名]/[项目名]/spiders/目录下找到一个news.py的蜘蛛源码文件<br>  my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> _.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |—-news.py<br>  打开news.py:</p><pre><code># -*- coding: utf-8 -*-</code></pre><p>import scrapy</p><p>class NewsSpider(scrapy.Spider):  #生成蜘蛛后Scrapy会将蜘蛛名首字母大写并在其后加Spider作为蜘蛛的类名<br>    name = ‘news’          #蜘蛛名<br>    allowed_domains = [‘<a href="http://suna.com&#39;]" target="_blank" rel="noopener">http://suna.com&#39;]</a>           #在genspider指定的域<br>    start_urls = [‘<a href="http://http://suna.com/&#39;]" target="_blank" rel="noopener">http://http://suna.com/&#39;]</a></p><pre><code>def parse(self, response):    pass</code></pre><p>2.全局命令（不需要进入项目）<br>scrapy &lt;命令&gt; [选项] [参数]<br>a. scrapy fetch –nolog –headers <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>b. scrapy view <a href="http://www.taobao.com" target="_blank" rel="noopener">http://www.taobao.com</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.项目命令（需要进入项目目录执行才可生效）&lt;br&gt;a.scrapy startproject &amp;lt;项目名称&amp;gt;&lt;br&gt;  eg.scrapy startproject my_crawler&lt;br&gt;  被成功执行后，项目结构为:&lt;br&gt;  my_crawler&lt;br
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>someone said something</title>
