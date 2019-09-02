@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-27T16:00:35.102Z</updated>
+  <updated>2019-09-02T10:46:45.270Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Compilers</title>
+    <link href="http://yoursite.com/2019/09/02/Compilers/"/>
+    <id>http://yoursite.com/2019/09/02/Compilers/</id>
+    <published>2019-09-02T10:39:54.000Z</published>
+    <updated>2019-09-02T10:46:45.270Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is my note about the Compilers class from stanford university</p><p>1.Intro to Compilers</p><p>1.1 Lexical Analysis<br>1.2 Parsing<br>1.3 Semantic Analysis<br>1.4 Optimization<br>1.5 Code Generation </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is my note about the Compilers class from stanford university&lt;/p&gt;
+&lt;p&gt;1.Intro to Compilers&lt;/p&gt;
+&lt;p&gt;1.1 Lexical Analysis&lt;br&gt;1.2 Parsing
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Scrapy</title>
