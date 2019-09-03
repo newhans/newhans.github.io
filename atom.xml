@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-02T15:37:06.158Z</updated>
+  <updated>2019-09-03T10:51:43.939Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GRE_WORD</title>
+    <link href="http://yoursite.com/2019/09/03/GRE-WORD/"/>
+    <id>http://yoursite.com/2019/09/03/GRE-WORD/</id>
+    <published>2019-09-03T09:10:23.000Z</published>
+    <updated>2019-09-03T10:51:43.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>ambiguity   n.歧义，双关语<br>analogy     n.比喻<br>analogous   adj.类似<br>scope       n.范围<br>optimization  n.优化<br>counterpart  n.对应物，副本<br>modify      v.优化<br>budget      n.预算<br>valid       adj.有效的<br>plot        n.计谋，策划<br>            v.划分，图谋<br>adhere      v.附着<br>outline     n.大纲<br>proportion  n.比例</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ambiguity   n.歧义，双关语&lt;br&gt;analogy     n.比喻&lt;br&gt;analogous   adj.类似&lt;br&gt;scope       n.范围&lt;br&gt;optimization  n.优化&lt;br&gt;counterpart  n.对应物，副本&lt;br&gt;modi
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Compilers</title>
     <link href="http://yoursite.com/2019/09/02/Compilers/"/>
     <id>http://yoursite.com/2019/09/02/Compilers/</id>
     <published>2019-09-02T10:39:54.000Z</published>
-    <updated>2019-09-02T15:37:06.158Z</updated>
+    <updated>2019-09-03T10:51:45.970Z</updated>
     
-    <content type="html"><![CDATA[<p>This is my note about the Compilers class from stanford university</p><p>1.Intro to Compilers</p><p>1.1 Lexical Analysis:divides program text into “word” or “tokens”<br>1.2 Parsing:Once words are understood,the next step is to                    understand sentence structure.Parsing = Diagramming<br>        Sentences.<br>1.3 Semantic Analysis<br>1.4 Optimization<br>1.5 Code Generation </p>]]></content>
+    <content type="html"><![CDATA[<p>This is my note about the Compilers class from stanford university</p><p>1.Intro to Compilers</p><p>1.1 Lexical Analysis:divides program text into “word” or “tokens”<br>1.2 Parsing:Once words are understood,the next step is to                    understand sentence structure.Parsing = Diagramming<br>        Sentences.<br>1.3 Semantic Analysis:Compilers perform limited semantic anlaysis<br>        to catch inconsistencies.<br>1.4 Optimization:automatically modify programs so that they not<br>        only can run fast but also can use less memory.<br>1.5 Code Generation:First,usually produces assembly code.Secondly,a<br>        translation into another language(analogous to human<br>        translation.</p>]]></content>
     
     <summary type="html">
     
