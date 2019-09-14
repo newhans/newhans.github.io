@@ -22,7 +22,7 @@
     <meta name="description" content="A Web Developer">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Scrapy · NeWhAn5&#39;s Studio</title>
+    <title>两数之和 · NeWhAn5&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">NeWhAn5&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Scrapy</a>
+                <a href="#" class="post-name">两数之和</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Scrapy
+            两数之和
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,22 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Array">Array</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Hash Table">Hash Table</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">337</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">250</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/08/26</span>
+                    <span class="post-intro-time">2019/09/14</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,22 +403,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>1.项目命令（需要进入项目目录执行才可生效）<br>a.scrapy startproject &lt;项目名称&gt;<br>  eg.scrapy startproject my_crawler<br>  被成功执行后，项目结构为:<br>  my_crawler<br>  | —-my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> <em>.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |—-</em> <em>init</em> _.py<br>  |———scrapy.cfg  Scrapy运行配置<br>b.scrapy crawl &lt;蜘蛛名&gt; - 使用指定的蜘蛛执行爬取,打印到终端<br>c.scrapy genspider [-t 模板名]&lt;蜘蛛名&gt;&lt;域&gt;<br>  eg.scrapy genspider news <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a><br>  执行成功后会在[项目名]/[项目名]/spiders/目录下找到一个news.py的蜘蛛源码文件<br>  my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> _.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |——-news.py<br>  打开news.py:</p>
-<pre><code># -*- coding: utf-8 -*-
-</code></pre><p>import scrapy</p>
-<p>class NewsSpider(scrapy.Spider):  #生成蜘蛛后Scrapy会将蜘蛛名首字母大写并在其后加Spider作为蜘蛛的类名<br>    name = ‘news’          #蜘蛛名<br>    allowed_domains = [‘<a href="http://suna.com&#39;]" target="_blank" rel="noopener">http://suna.com&#39;]</a>           #在genspider指定的域<br>    start_urls = [‘<a href="http://http://suna.com/&#39;]" target="_blank" rel="noopener">http://http://suna.com/&#39;]</a></p>
-<pre><code>def parse(self, response):
-    pass
-</code></pre><p>2.全局命令（不需要进入项目）<br>scrapy &lt;命令&gt; [选项] [参数]<br>a. scrapy fetch –nolog –headers <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>b. scrapy view <a href="http://www.taobao.com" target="_blank" rel="noopener">http://www.taobao.com</a></p>
+        <p>这学期有java课，突然意识到面向对象的优点，迷上的java。刚好实验室的老师这学期不让我进组（小Boss），那就刷刷题，看寒假能不能找到一个月那种实习刷刷经历。<br>第1题：</p>
+<blockquote>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标&gt;值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样&gt;的元素。<br>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+</blockquote>
+<p>思路1<br>按照题意跑两边循环，时间复杂度O(n^2)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.length; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] + nums[j] == target) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, j&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">NewHans</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/08/26/Scrapy/">http://yoursite.com/2019/08/26/Scrapy/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/08/26/Scrapy/">August 26th 2019, 11:46:31 am</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/08/26/Scrapy/">August 28th 2019, 12:00:35 am</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/09/14/两数之和/">http://yoursite.com/2019/09/14/两数之和/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/09/14/两数之和/">September 14th 2019, 10:22:29 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/09/14/两数之和/">September 14th 2019, 10:33:38 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -418,17 +424,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/02/Compilers/" title="Compilers">
-                    <div class="nextTitle">Compilers</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/08/16/someone-said-something/" title="someone said something">
-                    <div class="prevTitle">someone said something</div>
+                <a href="/2019/09/07/大国兴衰史/" title="大国兴衰史">
+                    <div class="prevTitle">大国兴衰史</div>
                 </a>
             
         </li>
