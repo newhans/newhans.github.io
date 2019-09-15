@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T04:27:48.872Z</updated>
+  <updated>2019-09-15T14:28:30.704Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最长公共前缀</title>
+    <link href="http://yoursite.com/2019/09/15/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+    <id>http://yoursite.com/2019/09/15/最长公共前缀/</id>
+    <published>2019-09-15T11:04:46.000Z</published>
+    <updated>2019-09-15T14:28:30.704Z</updated>
+    
+    <content type="html"><![CDATA[<p>第十四题</p><blockquote><p>编写一个函数来查找字符串数组中的最长公共前缀。<br>如果不存在公共前缀，返回空字符串 “”。<br>示例 1:<br>输入: [“flower”,”flow”,”flight”]<br>输出: “fl”<br>示例 2:<br>输入: [“dog”,”racecar”,”car”]<br>输出: “”<br>解释: 输入不存在公共前缀。<br>说明:<br>所有输入只包含小写字母 a-z 。<br>学到了一个课本上没有的java for的写法<br>不严格的说，Java的第二种for循环基本是这样的格式：<br>for (循环变量类型 循环变量名称 : 要被遍历的对象) 循环体<br>借助这种语法，遍历一个数组的操作就可以采取这样的写法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 建立一个数组 */</span></span><br><span class="line"><span class="keyword">int</span>[] integers = &#123;<span class="number">1</span>， <span class="number">2</span>， <span class="number">3</span>， <span class="number">4</span>&#125;;</span><br><span class="line"><span class="comment">/* 开始遍历 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i : integers) &#123;</span><br><span class="line">System.out.println(i);<span class="comment">/* 依次输出“1”、“2”、“3”、“4” */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><p>charAt(int index)返回指定索引处的char值<br>substring(,)就是截取字符串str<br>例如：str=“abcdefg”；<br>则：str.subString(1,3)为字符串”bc”<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = strs.length;</span><br><span class="line">        <span class="keyword">if</span> (len == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> minLen = <span class="number">0x7fffffff</span>;</span><br><span class="line">        <span class="keyword">for</span> (String str : strs) minLen = Math.min(minLen, str.length());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; minLen; ++j)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; ++i)</span><br><span class="line">                <span class="keyword">if</span> (strs[<span class="number">0</span>].charAt(j) != strs[i].charAt(j))</span><br><span class="line">                    <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, j);</span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, minLen);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>执行用时 :3 ms, 在所有 Java 提交中击败了63.19%的用户<br>内存消耗 :36.3 MB, 在所有 Java 提交中击败了86.60%的用户</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第十四题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编写一个函数来查找字符串数组中的最长公共前缀。&lt;br&gt;如果不存在公共前缀，返回空字符串 “”。&lt;br&gt;示例 1:&lt;br&gt;输入: [“flower”,”flow”,”flight”]&lt;br&gt;输出: “fl”&lt;br&gt;示例 2:&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://yoursite.com/tags/String/"/>
+    
+  </entry>
   
   <entry>
     <title>回文数</title>
