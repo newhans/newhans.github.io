@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T14:28:30.704Z</updated>
+  <updated>2019-09-15T14:36:36.510Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有效的括号</title>
+    <link href="http://yoursite.com/2019/09/15/%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/"/>
+    <id>http://yoursite.com/2019/09/15/有效的括号/</id>
+    <published>2019-09-15T14:32:38.000Z</published>
+    <updated>2019-09-15T14:36:36.510Z</updated>
+    
+    <content type="html"><![CDATA[<p>第二十题</p><blockquote><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否&gt;有效。<br>有效字符串需满足：<br>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>注意空字符串可被认为是有效字符串。<br>示例 1:<br>输入: “()”<br>输出: true<br>示例 2:<br>输入: “()[]{}”<br>输出: true<br>示例 3:<br>输入: “(]”<br>输出: false<br>示例 4:<br>输入: “([)]”<br>输出: false<br>示例 5:<br>输入: “{[]}”<br>输出: true</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第二十题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否&amp;gt;有效。&lt;br&gt;有效字符串需满足：&lt;br&gt;左括号必须用相同类型的右括号闭合。&lt;br&gt;左括号必须以正确的顺序闭合。&lt;br&gt;注意空字符
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://yoursite.com/tags/String/"/>
+    
+      <category term="Stack" scheme="http://yoursite.com/tags/Stack/"/>
+    
+  </entry>
   
   <entry>
     <title>最长公共前缀</title>
