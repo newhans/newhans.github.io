@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-18T10:53:29.663Z</updated>
+  <updated>2019-09-20T10:03:34.374Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最大子序和</title>
+    <link href="http://yoursite.com/2019/09/20/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/"/>
+    <id>http://yoursite.com/2019/09/20/最大子序和/</id>
+    <published>2019-09-20T02:47:04.000Z</published>
+    <updated>2019-09-20T10:03:34.374Z</updated>
+    
+    <content type="html"><![CDATA[<p>第53题</p><blockquote><p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。<br>示例:<br>输入: [-2,1,-3,4,-1,2,1,-5,4],<br>输出: 6<br>解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。<br>进阶:<br>如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。</p></blockquote><p>思路一：<br>题意是求数组中子数组的最大和，这种最优问题一般第一时间想到的就是动态规划，我们可以这样想，当部分序列和大于零的话就一直加下一个元素即可，并和当前最大值进行比较，如果出现部分序列小于零的情况，那肯定就是从当前元素算起。其转移方程就是 dp[i] = nums[i] + (dp[i - 1] &gt; 0 ? dp[i - 1] : 0);，由于我们不需要保留 dp 状态，故可以优化空间复杂度为 1，即 dp = nums[i] + (dp &gt; 0 ? dp : 0);<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length, dp = nums[<span class="number">0</span>], max = dp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            dp = nums[i] + (dp &gt; <span class="number">0</span> ? dp : <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">if</span> (dp &gt; max) max = dp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>执行用时 :<br>1 ms, 在所有 Java 提交中击败了99.95%的用户<br>内存消耗 :38.7 MB, 在所有 Java 提交中击败了82.78%的用户</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第53题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。&lt;br&gt;示例:&lt;br&gt;输入: [-2,1,-3,4,-1,2,1,-5,4],&lt;br&gt;输出: 6&lt;br&gt;解释: 连续子数组
+      
+    
+    </summary>
+    
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+      <category term="Divide and Conquer" scheme="http://yoursite.com/tags/Divide-and-Conquer/"/>
+    
+      <category term="Dynamic Programming" scheme="http://yoursite.com/tags/Dynamic-Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>报数</title>
+    <link href="http://yoursite.com/2019/09/20/%E6%8A%A5%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/09/20/报数/</id>
+    <published>2019-09-20T02:26:39.000Z</published>
+    <updated>2019-09-20T02:26:39.529Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搜索插入位置</title>
+    <link href="http://yoursite.com/2019/09/19/%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/09/19/搜索插入位置/</id>
+    <published>2019-09-19T08:54:31.000Z</published>
+    <updated>2019-09-19T09:11:16.777Z</updated>
+    
+    <content type="html"><![CDATA[<p>第35题<br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。<br>你可以假设数组中无重复元素。<br>示例 1:<br>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:<br>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:<br>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:<br>输入: [1,3,5,6], 0<br>输出: 0<br>寻找target的插入位置，二分查找即可<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = nums.length - <span class="number">1</span>, mid = (right + left) &gt;&gt; <span class="number">1</span>;</span><br><span class="line"><span class="comment">//nums.length length是成员</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">if</span> (target &lt;= nums[mid]) right = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> left = mid + <span class="number">1</span>;</span><br><span class="line">            mid = (right + left) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>执行用时 :0 ms, 在所有 Java 提交中击败了100.00%的用户<br>内存消耗 :38.7 MB, 在所有 Java 提交中击败了59.80%的用户</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第35题&lt;br&gt;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。&lt;br&gt;你可以假设数组中无重复元素。&lt;br&gt;示例 1:&lt;br&gt;输入: [1,3,5,6], 5&lt;br&gt;输出: 2&lt;br&gt;示例 2:&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://yoursite.com/tags/String/"/>
+    
+      <category term="Binary Search" scheme="http://yoursite.com/tags/Binary-Search/"/>
+    
+  </entry>
   
   <entry>
     <title>实现strStr</title>
@@ -330,7 +398,7 @@
     <link href="http://yoursite.com/2019/08/26/Scrapy/"/>
     <id>http://yoursite.com/2019/08/26/Scrapy/</id>
     <published>2019-08-26T03:46:31.000Z</published>
-    <updated>2019-08-27T16:00:35.102Z</updated>
+    <updated>2019-09-19T12:29:56.546Z</updated>
     
     <content type="html"><![CDATA[<p>1.项目命令（需要进入项目目录执行才可生效）<br>a.scrapy startproject &lt;项目名称&gt;<br>  eg.scrapy startproject my_crawler<br>  被成功执行后，项目结构为:<br>  my_crawler<br>  | —-my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> <em>.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |—-</em> <em>init</em> _.py<br>  |———scrapy.cfg  Scrapy运行配置<br>b.scrapy crawl &lt;蜘蛛名&gt; - 使用指定的蜘蛛执行爬取,打印到终端<br>c.scrapy genspider [-t 模板名]&lt;蜘蛛名&gt;&lt;域&gt;<br>  eg.scrapy genspider news <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a><br>  执行成功后会在[项目名]/[项目名]/spiders/目录下找到一个news.py的蜘蛛源码文件<br>  my_crawler  #爬虫项目包目录<br>  |  |— _ <em>init</em> _.py<br>  |  |—items.py  #item定义文件<br>  |  |—middlewares.py #自定义中间件<br>  |  |—pipelines.py  #自定义管道<br>  |  |—settings.py #项目配置文件<br>  |  |—spiders  #蜘蛛类的存放目录<br>  |    |——-news.py<br>  打开news.py:</p><pre><code># -*- coding: utf-8 -*-</code></pre><p>import scrapy</p><p>class NewsSpider(scrapy.Spider):  #生成蜘蛛后Scrapy会将蜘蛛名首字母大写并在其后加Spider作为蜘蛛的类名<br>    name = ‘news’          #蜘蛛名<br>    allowed_domains = [‘<a href="http://suna.com&#39;]" target="_blank" rel="noopener">http://suna.com&#39;]</a>           #在genspider指定的域<br>    start_urls = [‘<a href="http://http://suna.com/&#39;]" target="_blank" rel="noopener">http://http://suna.com/&#39;]</a></p><pre><code>def parse(self, response):    pass</code></pre><p>2.全局命令（不需要进入项目）<br>scrapy &lt;命令&gt; [选项] [参数]<br>a. scrapy fetch –nolog –headers <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>b. scrapy view <a href="http://www.taobao.com" target="_blank" rel="noopener">http://www.taobao.com</a></p>]]></content>
     
@@ -351,16 +419,16 @@
     <link href="http://yoursite.com/2019/08/16/someone-said-something/"/>
     <id>http://yoursite.com/2019/08/16/someone-said-something/</id>
     <published>2019-08-16T05:59:50.000Z</published>
-    <updated>2019-09-04T05:57:30.709Z</updated>
+    <updated>2019-09-20T10:06:13.337Z</updated>
     
-    <content type="html"><![CDATA[<p>“她已经不是你的辣，<br>    但是你的她你永远记得喔”<br>                        ————   Zxt 08/16/2019<br>一切就像成都夏日的阳光一样明媚而美好，让人忘却了夏天结束之后就是阴沉的雨季的事实。</p>]]></content>
+    <content type="html"><![CDATA[<p>“她已经不是你的辣，<br>    但是你的她你永远记得喔”<br>                        ————   Zxt 08/16/2019<br>一切就像成都夏日的阳光一样明媚而美好，让人忘却了夏天结束之后就是阴沉的雨季的事实。</p><p>她天生热情，对每个人都微笑致意，和每个人都有说不完的共同话题。不是只对你，请你不要自作多情，浪费精力不说，还像个小丑或傻逼</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;“她已经不是你的辣，&lt;br&gt;    但是你的她你永远记得喔”&lt;br&gt;                        ————   Zxt 08/16/2019&lt;br&gt;一切就像成都夏日的阳光一样明媚而美好，让人忘却了夏天结束之后就是阴沉的雨季的事实。&lt;/p&gt;
-
+&lt;p&gt;她天生热情
       
     
     </summary>
