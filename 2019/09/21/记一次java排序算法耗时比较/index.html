@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">226</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -403,7 +403,17 @@ height:50vh;
     <article class="article-entry">
         <p>1.测试代码运行时间<br>1.1毫秒：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">long</span> endTime = System.currentTimeMillis();</span><br><span class="line">System.out.println((endTime - startTime) + <span class="string">"ms"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>1.2纳秒：用nanoTime()替换currentTimeMillis()即可</p>
-<p>2.随机数的生成<br>nextInt(int n) 方法用于获取一个伪随机，在0(包括)和指定值(不包括)，即左闭右开的区间，从此随机数生成器的序列中取出均匀分布的int值。查看Random类的源代码可以发现，不带参数的nextInt会产生所有有效的整数。<br>生成随机数的思路是，将生成的值放到一个数组之中，然后用程序随机去读取数组中任意两个坐标，如果坐标相等则继续随机，如果坐标不相等，就交换两个坐标的值。<br><code>`</code>Java<br>int[] values = new int[1000000];<br>int temp1,temp2,temp3;<br>Random r = new Random();<br>//初始化数组<br>for(int i = 0;i &lt; values.length;i++){<br>    value[i] = i + 1;<br>}</p>
+<p>2.随机数的生成<br>nextInt(int n) 方法用于获取一个伪随机，在0(包括)和指定值(不包括)，即左闭右开的区间，从此随机数生成器的序列中取出均匀分布的int值。查看Random类的源代码可以发现，不带参数的nextInt会产生所有有效的整数。<br>生成随机数的思路是，将生成的值放到一个数组之中，然后用程序随机去读取数组中任意两个坐标，如果坐标相等则继续随机，如果坐标不相等，就交换两个坐标的值。<br>翻看Java文档：<br>*1.Random:<br>public Random()<br>Creates a new random number generator. This constructor(n.构造函数) sets the seed of the random number generator to a value very likely to be distinct(different) from any other invocation(n<br>.调用) of this constructor.</p>
+<p>public Random(long seed)<br>Creates a new random number generator using a single long seed. The seed is the initial value of the internal(inside/inner) state of the pseudorandom(伪随机) number generator which is maintained by method next(int).<br>The invocation new Random(seed) is equivalent to:<br> Random rnd = new Random();<br> rnd.setSeed(seed);<br>Parameters(n.参数):<br>seed - the initial seed<br>See Also:<br>setSeed(long)<br>2.<br>public int nextInt()<br>Returns the next pseudorandom, uniformly distributed int value from this random number generator’s sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 232 possible int values are produced with (approximately) equal probability.<br>The method nextInt is implemented by class Random as if by:</p>
+<p> public int nextInt() {<br>   return next(32);<br> }<br>Returns:<br>the next pseudorandom, uniformly distributed int value from this random number generator’s sequence</p>
+<p>public int nextInt(int bound)<br>Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive), drawn from this random number generator’s sequence. The general contract of nextInt is that one int value in the specified range is pseudorandomly generated and returned. All bound possible int values are produced with (approximately) equal probability. The method nextInt(int bound) is implemented by class Random as if by:</p>
+<p> public int nextInt(int bound) {<br>   if (bound &lt;= 0)<br>     throw new IllegalArgumentException(“bound must be positive”);</p>
+<p>   if ((bound &amp; -bound) == bound)  // i.e., bound is a power of 2<br>     return (int)((bound * (long)next(31)) &gt;&gt; 31);</p>
+<p>   int bits, val;<br>   do {<br>       bits = next(31);<br>       val = bits % bound;<br>   } while (bits - val + (bound-1) &lt; 0);<br>   return val;<br> }<br>The hedge “approximately” is used in the foregoing description only because the next method is only approximately an unbiased source of independently chosen bits. If it were a perfect source of randomly chosen bits, then the algorithm shown would choose int values from the stated range with perfect uniformity.</p>
+<p>The algorithm is slightly tricky. It rejects values that would result in an uneven distribution (due to the fact that 2^31 is not divisible by n). The probability of a value being rejected depends on n. The worst case is n=2^30+1, for which the probability of a reject is 1/2, and the expected number of iterations before the loop terminates is 2.</p>
+<p>The algorithm treats the case where n is a power of two specially: it returns the correct number of high-order bits from the underlying pseudo-random number generator. In the absence of special treatment, the correct number of low-order bits would be returned. Linear congruential pseudo-random number generators such as the one implemented by this class are known to have short periods in the sequence of values of their low-order bits. Thus, this special case greatly increases the length of the sequence of values returned by successive calls to this method if n is a small power of two.</p>
+<p>Parameters:<br>bound - the upper bound (exclusive). Must be positive.<br>Returns:<br>the next pseudorandom, uniformly distributed int value between zero (inclusive) and bound (exclusive) from this random number generator’s sequence<br>Throws:<br>IllegalArgumentException - if bound is not positive<br>Since:<br>1.2<br>文档链接:<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html" target="_blank" rel="noopener">google</a>*<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] values = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000000</span>];</span><br><span class="line"><span class="keyword">int</span> temp1,temp2,temp3;</span><br><span class="line">Random r = <span class="keyword">new</span> Random();</span><br><span class="line"><span class="comment">//初始化数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; values.length;i++)&#123;</span><br><span class="line">    value[i] = i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//随机交换value.length次</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; values.length;i++)&#123;</span><br><span class="line">    temp1 = Math.abs(r.nextInt()) % (value.length - <span class="number">1</span>);<span class="comment">//随机生成一个位置</span></span><br><span class="line">    temp2 = Math.abs(r.nextInt()) % </span><br><span class="line">    (value.length - <span class="number">1</span>);<span class="comment">//随机生成另一个位置</span></span><br><span class="line">    <span class="keyword">if</span>(temp1 != temp2)&#123;</span><br><span class="line">        temp3 = values[temp1];</span><br><span class="line">        values[temp1] = values[temp2];</span><br><span class="line">        values[temp2] = temp3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//遍历打印</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>;i++)&#123;</span><br><span class="line">    System.out.print(values[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后最朴素的快速排序：<br><code>`</code>Java<br>public class Quick<br>{<br>    public static void sort(Comparable[] a)<br>    {<br>        StdRandom.shuffle(a);<br>        //清除对输入的依赖<br>        sort(a,0,a.length - 1);<br>    }<br>    private static int partition(Comparable[] a,int lo,int high)<br>    {<br>        //将数组切分为a[lo..i-1],a[i],a[i+1..high]<br>        int i = lo, j = high + 1;//左右扫描指针<br>        Comparable v = a[lo];//切分元素<br>        while(true)<br>        {<br>            //扫描左右，检查扫描是否结束并交换元素<br>            while(less(a[++i],v))<br>            {<br>                if( i == hi )break;<br>            }<br>            while(less(v,a[–j]))<br>            {<br>                if( j == lo )break;<br>            }<br>            if(i &gt;= j)break;<br>            exch(a,i,j);<br>        }<br>        exch(a,lo,j)//将v = a[j]<br>    }<br>}</p>
 
     </article>
     <!-- license  -->
@@ -412,7 +422,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">NewHans</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/09/21/记一次java排序算法耗时比较/">http://yoursite.com/2019/09/21/记一次java排序算法耗时比较/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/09/21/记一次java排序算法耗时比较/">September 21st 2019, 9:26:15 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/09/21/记一次java排序算法耗时比较/">September 21st 2019, 10:40:29 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/09/21/记一次java排序算法耗时比较/">September 22nd 2019, 6:40:50 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -824,6 +834,14 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 21
@@ -956,29 +974,29 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="Linked List"><span class="iconfont-archer">&#xe606;</span>Linked List</span>
     
-        <span class="sidebar-tag-name" data-tags="Array"><span class="iconfont-archer">&#xe606;</span>Array</span>
-    
-        <span class="sidebar-tag-name" data-tags="Hash Table"><span class="iconfont-archer">&#xe606;</span>Hash Table</span>
-    
-        <span class="sidebar-tag-name" data-tags="Math"><span class="iconfont-archer">&#xe606;</span>Math</span>
-    
         <span class="sidebar-tag-name" data-tags="String"><span class="iconfont-archer">&#xe606;</span>String</span>
-    
-        <span class="sidebar-tag-name" data-tags="Binary Search"><span class="iconfont-archer">&#xe606;</span>Binary Search</span>
     
         <span class="sidebar-tag-name" data-tags="Two Pointers"><span class="iconfont-archer">&#xe606;</span>Two Pointers</span>
     
-        <span class="sidebar-tag-name" data-tags="USA"><span class="iconfont-archer">&#xe606;</span>USA</span>
+        <span class="sidebar-tag-name" data-tags="Math"><span class="iconfont-archer">&#xe606;</span>Math</span>
     
-        <span class="sidebar-tag-name" data-tags="New island"><span class="iconfont-archer">&#xe606;</span>New island</span>
+        <span class="sidebar-tag-name" data-tags="Binary Search"><span class="iconfont-archer">&#xe606;</span>Binary Search</span>
     
-        <span class="sidebar-tag-name" data-tags="Stack"><span class="iconfont-archer">&#xe606;</span>Stack</span>
+        <span class="sidebar-tag-name" data-tags="Array"><span class="iconfont-archer">&#xe606;</span>Array</span>
+    
+        <span class="sidebar-tag-name" data-tags="Hash Table"><span class="iconfont-archer">&#xe606;</span>Hash Table</span>
     
         <span class="sidebar-tag-name" data-tags="Divide and Conquer"><span class="iconfont-archer">&#xe606;</span>Divide and Conquer</span>
     
         <span class="sidebar-tag-name" data-tags="Dynamic Programming"><span class="iconfont-archer">&#xe606;</span>Dynamic Programming</span>
     
+        <span class="sidebar-tag-name" data-tags="Stack"><span class="iconfont-archer">&#xe606;</span>Stack</span>
+    
         <span class="sidebar-tag-name" data-tags="Java"><span class="iconfont-archer">&#xe606;</span>Java</span>
+    
+        <span class="sidebar-tag-name" data-tags="USA"><span class="iconfont-archer">&#xe606;</span>USA</span>
+    
+        <span class="sidebar-tag-name" data-tags="New island"><span class="iconfont-archer">&#xe606;</span>New island</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
