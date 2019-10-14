@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-14T03:05:44.630Z</updated>
+  <updated>2019-10-14T03:51:29.969Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>加一</title>
+    <link href="http://yoursite.com/2019/10/14/%E5%8A%A0%E4%B8%80/"/>
+    <id>http://yoursite.com/2019/10/14/加一/</id>
+    <published>2019-10-14T03:14:02.000Z</published>
+    <updated>2019-10-14T03:51:29.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>No.66</p><blockquote><p>给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。<br>最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。<br>你可以假设除了整数 0 之外，这个整数不会以零开头。<br>示例 1:<br>输入: [1,2,3]<br>输出: [1,2,4]<br>解释: 输入数组表示数字 123。<br>示例 2:<br>输入: [4,3,2,1]<br>输出: [4,3,2,2]<br>解释: 输入数组表示数字 4321。<br>思路：模拟<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] plusOne(<span class="keyword">int</span>[] digits) &#123;</span><br><span class="line">        <span class="keyword">int</span> p = digits.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(digits[p]  !=  <span class="number">9</span>)   &#123;</span><br><span class="line">            digits[p] =  ++ digits[p];</span><br><span class="line">            <span class="keyword">return</span> digits;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">do</span>&#123;</span><br><span class="line">                digits[p--]  = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(p &gt;= <span class="number">0</span> &amp;&amp; digits[p] == <span class="number">9</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(digits[<span class="number">0</span>] == <span class="number">0</span>)&#123;</span><br><span class="line">            digits = <span class="keyword">new</span> <span class="keyword">int</span>[digits.length + <span class="number">1</span>];</span><br><span class="line">            digits[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            digits[p] = ++digits[p];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> digits;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><p>执行用时 :0 ms, 在所有 java 提交中击败了100.00%的用户<br>内存消耗 :35.2 MB, 在所有 java 提交中击败了37.43%的用户</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;No.66&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。&lt;br&gt;最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。&lt;br&gt;你可以假设除了整数 0 之外，这个整数不会以零开头。&lt;br&gt;示例 1:&lt;br&gt;输
+      
+    
+    </summary>
+    
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+      <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>最后一个单词的长度</title>
@@ -462,29 +489,6 @@
       
       
         &lt;p&gt;ambiguity   n.歧义，双关语&lt;br&gt;analogy     n.比喻&lt;br&gt;analogous   adj.类似&lt;br&gt;scope       n.范围&lt;br&gt;optimization  n.优化&lt;br&gt;counterpart  n.对应物，副本&lt;br&gt;modi
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Compilers</title>
-    <link href="http://yoursite.com/2019/09/02/Compilers/"/>
-    <id>http://yoursite.com/2019/09/02/Compilers/</id>
-    <published>2019-09-02T10:39:54.000Z</published>
-    <updated>2019-09-03T10:51:45.970Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is my note about the Compilers class from stanford university</p><p>1.Intro to Compilers</p><p>1.1 Lexical Analysis:divides program text into “word” or “tokens”<br>1.2 Parsing:Once words are understood,the next step is to                    understand sentence structure.Parsing = Diagramming<br>        Sentences.<br>1.3 Semantic Analysis:Compilers perform limited semantic anlaysis<br>        to catch inconsistencies.<br>1.4 Optimization:automatically modify programs so that they not<br>        only can run fast but also can use less memory.<br>1.5 Code Generation:First,usually produces assembly code.Secondly,a<br>        translation into another language(analogous to human<br>        translation.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This is my note about the Compilers class from stanford university&lt;/p&gt;
-&lt;p&gt;1.Intro to Compilers&lt;/p&gt;
-&lt;p&gt;1.1 Lexical Analysis:divides progra
       
     
     </summary>
