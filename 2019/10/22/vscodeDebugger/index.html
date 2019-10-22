@@ -22,7 +22,7 @@
     <meta name="description" content="A Web Developer">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>有效的括号 · Newhans&#39;s Studio</title>
+    <title>vscodeDebugger · Newhans&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">NeWhAn5&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">有效的括号</a>
+                <a href="#" class="post-name">vscodeDebugger</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            有效的括号
+            vscodeDebugger
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Stack">Stack</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="vscode">vscode</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">400</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">149</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/09/15</span>
+                    <span class="post-intro-time">2019/10/22</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,21 +401,18 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>第二十题</p>
-<blockquote>
-<p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否&gt;有效。<br>有效字符串需满足：<br>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>注意空字符串可被认为是有效字符串。<br>示例 1:<br>输入: “()”<br>输出: true<br>示例 2:<br>输入: “()[]{}”<br>输出: true<br>示例 3:<br>输入: “(]”<br>输出: false<br>示例 4:<br>输入: “([)]”<br>输出: false<br>示例 5:<br>输入: “{[]}”<br>输出: true</p>
-</blockquote>
-<p>题意是判断括号匹配是否正确，很明显，我们可以用栈来解决这个问题，当出现左括号的时候入栈，当遇到右括号时，判断栈顶的左括号是否何其匹配，不匹配的话直接返回 false 即可，最终判断是否空栈即可，这里我们可以用数组模拟栈的操作使其操作更快，有个细节注意下 top = 1;，从而省去了之后判空的操作和 top - 1 导致数组越界的错误。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] stack = <span class="keyword">new</span> <span class="keyword">char</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> top = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">'('</span> || c == <span class="string">'['</span> || c == <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">                stack[top++] = c; </span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">')'</span> &amp;&amp; stack[--top] != <span class="string">'('</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">']'</span> &amp;&amp; stack[--top] != <span class="string">'['</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'&#125;'</span> &amp;&amp; stack[--top] != <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> top == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意是–top而不是top–嗷！<br>执行用时 :1 ms, 在所有 Java 提交中击败了100.00%的用户<br>内存消耗 :34.6 MB, 在所有 Java 提交中击败了83.48%的用户<br>看这个做题情况，大家应该是直接用栈了233333</p>
+        <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//c_cpp_properties.json</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Linux"</span>,</span><br><span class="line">            <span class="attr">"includePath"</span>: [</span><br><span class="line">                <span class="string">"$&#123;workspaceFolder&#125;/**"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"defines"</span>: [],</span><br><span class="line">            <span class="attr">"compilerPath"</span>: <span class="string">"/usr/bin/clang-6.0"</span>,</span><br><span class="line">            <span class="attr">"cStandard"</span>: <span class="string">"c11"</span>,</span><br><span class="line">            <span class="attr">"cppStandard"</span>: <span class="string">"c++17"</span>,</span><br><span class="line">            <span class="attr">"intelliSenseMode"</span>: <span class="string">"clang-x64"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"version"</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//launch.json</span><br><span class="line">&#123;</span><br><span class="line">    // Use IntelliSense to learn about possible attributes.</span><br><span class="line">    // Hover to view descriptions of existing attributes.</span><br><span class="line">    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    "version": "0.2.0",</span><br><span class="line">    "configurations": [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"(gdb) Launch"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"cppdbg"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"program"</span>: <span class="string">"$&#123;workspaceFolder&#125;/test"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [<span class="string">"test"</span>],</span><br><span class="line">            <span class="attr">"stopAtEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"cwd"</span>: <span class="string">"$&#123;workspaceFolder&#125;"</span>,</span><br><span class="line">            <span class="attr">"environment"</span>: [],</span><br><span class="line">            <span class="attr">"externalConsole"</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">"MIMode"</span>: <span class="string">"gdb"</span>,</span><br><span class="line">            <span class="attr">"miDebuggerPath"</span>: <span class="string">"/usr/bin/gdb"</span>,</span><br><span class="line">            <span class="attr">"setupCommands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"description"</span>: <span class="string">"Enable pretty-printing for gdb"</span>,</span><br><span class="line">                    <span class="attr">"text"</span>: <span class="string">"-enable-pretty-printing"</span>,</span><br><span class="line">                    <span class="attr">"ignoreFailures"</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//makefile</span><br><span class="line">test: rdparser1.o lex.yy.o</span><br><span class="line">		  gcc rdparser1.o lex.yy.o -o test -lfl</span><br><span class="line"></span><br><span class="line">rdparser1.o: rdparser1.c</span><br><span class="line">		gcc -c -g rdparser1.c</span><br><span class="line"></span><br><span class="line">lex.yy.o: rdlex.l</span><br><span class="line">		flex rdlex.l</span><br><span class="line">		gcc -c -g lex.yy.c</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">NewHans</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/09/15/有效的括号/">http://yoursite.com/2019/09/15/有效的括号/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/09/15/有效的括号/">September 15th 2019, 10:32:38 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/09/15/有效的括号/">September 15th 2019, 11:43:24 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/10/22/vscodeDebugger/">http://yoursite.com/2019/10/22/vscodeDebugger/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/10/22/vscodeDebugger/">October 22nd 2019, 11:31:12 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/10/22/vscodeDebugger/">October 22nd 2019, 11:38:19 pm</a>
             </p><p>版权声明：UT-Austin</p>
         </div>
     
@@ -425,17 +420,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/15/合并两个有序链表/" title="合并两个有序链表">
-                    <div class="nextTitle">合并两个有序链表</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/09/15/最长公共前缀/" title="最长公共前缀">
-                    <div class="prevTitle">最长公共前缀</div>
+                <a href="/2019/10/21/托福写作/" title="托福写作">
+                    <div class="prevTitle">托福写作</div>
                 </a>
             
         </li>
