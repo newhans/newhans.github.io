@@ -22,7 +22,7 @@
     <meta name="description" content="A Web Developer">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Newhans&#39;s Studio</title>
+    <title>软件工程基础 · Newhans&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">NeWhAn5&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">软件工程基础</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">NeWhAn5's Studio.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            软件工程基础
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="EXAM">EXAM</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">455</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/10/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,332 +399,50 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/19/搜索插入位置/">
-            
-                <span>搜索插入位置</span>
-        </a>
-        <div class="abstract-content">
-            第35题给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。你可以假设数组中无重复元素。示例 1:输入: [1,3,5,6], 5输出: 2示例 2:输入: [1,3,5,6], 2输出: 1示例 3:输入: [1,3,5,6], 7输出: 4示例 4:输入: [1,3,5,6], 0输出: 0寻找target的插入位置，二分查找即可123456789101112class Solution &#123;    public int searchInsert(int[] nums, int target) &#123; ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Binary Search">Binary Search</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>第一章 软件工程概述：<br>1.支持软件工程的根基在于 质量关注点<br>2.软件工程实践的一个重要原则是存在价值，是指：软件能够给用户提供价值</p>
+<p>第二章<br>1.软件过程模型中定义的框架活动是： 可以迭代的<br>2.统一过程（UP） 是迭代和增量式模型<br>3.增量模型： 在前面增量的基础上开发后面的增量，采用迭代的方式<br>4.敏捷模型，原型模型，瀑布模型属于软件过程模型<br>  迭代模型不属于软件过程模型<br>5.敏捷开发不是严谨正式的方法<br>6.敏捷开发：要写文档<br>           采用增量式开发和短周期交付，以便及时响应变化<br>7.在需求不稳定的情况下，尽量采用增量式开发<br>8.同一软件组织不应该只采用一种软件过程模型<br>9.分析 不属于过程共同活动<br>10.软件构造不属于瀑布模型活动<br>   测试和维护属于瀑布模型活动<br>11.如果软件开发过程中使用增量模型，第一个增量 可以变动<br>                                            满足基本要求<br>                                            往往是核心产品<br>                                            不一定正确<br>12.高效性不是瀑布模型的特点<br>   瀑布模型的特点：依赖性，顺序性，推迟实现<br>13.原型模型不适用于小而可用的项目<br>    原型模型容易让设计者在质量和原型间有所折中，让客户意识不到一些质量问题<br>14.螺旋模型适用于大型复杂的软件项目<br>15.增量模型不适用于技术成熟的项目<br>           每个增量的开发不是嵌套式增量方式</p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/18/实现strStr/">
-            
-                <span>实现strStr</span>
-        </a>
-        <div class="abstract-content">
-            第二十八题
-
-实现 strStr() 函数。给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。示例 1:输入: haystack = “hello”, needle = “ll”输出: 2示例 2:输入: haystack = “aaaaa”, needle = “bba”输出: -1说明:当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">NewHans</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/10/30/软件工程基础/">http://yoursite.com/2019/10/30/软件工程基础/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/10/30/软件工程基础/">October 30th 2019, 7:52:56 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/10/30/软件工程基础/">October 30th 2019, 9:51:42 pm</a>
+            </p><p>版权声明：UT-Austin</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Two Pointers">Two Pointers</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/18/移除元素/">
-            
-                <span>移除元素</span>
-        </a>
-        <div class="abstract-content">
-            第二十七题
-
-给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。示例 1:给定 nums = [3,2,2,3], val = 3,函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。示例 2:给定 nums = [0,1,2,2,3,0,4,2], val = 2,函数应该返回新的长度 5, 并且 nums 中的前五个元素为...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Array">Array</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Two Pointers">Two Pointers</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/15/合并两个有序链表/">
-            
-                <span>合并两个有序链表</span>
-        </a>
-        <div class="abstract-content">
-            第二十一题
-
-将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。示例：输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linked List">Linked List</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/15/有效的括号/">
-            
-                <span>有效的括号</span>
-        </a>
-        <div class="abstract-content">
-            第二十题
-
-给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否&gt;有效。有效字符串需满足：左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。注意空字符串可被认为是有效字符串。示例 1:输入: “()”输出: true示例 2:输入: “()[]{}”输出: true示例 3:输入: “(]”输出: false示例 4:输入: “([)]”输出: false示例 5:输入: “{[]}”输出: true
-
-题意是判断括号匹配是否正确，很明显，我们可以用栈来解决这个问题，当出现左括号的时候入栈，当遇到右括号时，判断栈顶的左括号是否何其匹配...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Stack">Stack</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/15/最长公共前缀/">
-            
-                <span>最长公共前缀</span>
-        </a>
-        <div class="abstract-content">
-            第十四题
-
-编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 “”。示例 1:输入: [“flower”,”flow”,”flight”]输出: “fl”示例 2:输入: [“dog”,”racecar”,”car”]输出: “”解释: 输入不存在公共前缀。说明:所有输入只包含小写字母 a-z 。学到了一个课本上没有的java for的写法不严格的说，Java的第二种for循环基本是这样的格式：for (循环变量类型 循环变量名称 : 要被遍历的对象) 循环体借助这种语法，遍历一个数组的操作就可以采取这样的写法：123456/* 建立一个数组 */int[]...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/15/回文数/">
-            
-                <span>回文数</span>
-        </a>
-        <div class="abstract-content">
-            第九题
-
-判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）&gt;读都是一样的整数。示例 1:输入: 121输出: true示例 2:输入: -121输出: false解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文&gt;数。示例 3:输入: 10输出: false解释: 从右向左读, 为 01 。因此它不是一个回文数。进阶:你能不将整数转为字符串来解决这个问题吗？方法一：题目给的是一个整数，所以负数一定不是回文数，最容易想到的做法就是把他的回文数算出来，然后再做比较1234567891011class Solution &...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Math">Math</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/15/整数反转/">
-            
-                <span>整数反转</span>
-        </a>
-        <div class="abstract-content">
-            第七题
-
-给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。示例 1:输入: 123输出: 321示例 2:输入: -123输出: -321示例 3:输入: 120输出: 21注意:假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  &gt;231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
-
-有个小坑点，当它的逆序整型数溢出的话，那么就返回 0，用我们代码表示的话可以求得结果保存在 long 中，最后把结果和整型的两个范围比较即可。12345678class Solution &#123;    public int...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Math">Math</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/14/两数之和/">
-            
-                <span>两数之和</span>
-        </a>
-        <div class="abstract-content">
-            这学期有java课，突然意识到面向对象的优点，迷上的java。刚好实验室的老师这学期不让我进组（小Boss），那就刷刷题，看寒假能不能找到一个月那种实习刷刷经历。第1题：
-
-给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样&gt;的元素。示例:给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]
-
-思路1按照题意跑两遍循环，时间复杂度O(n^2...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Array">Array</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Hash Table">Hash Table</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/大国兴衰史/">
-            
-                <span>大国兴衰史</span>
-        </a>
-        <div class="abstract-content">
-            1.《葡萄牙史》第四章中，哪些史实可以反映葡萄牙和西班牙的国家关系？一.葡萄牙的君主若奥不大参与当时在伊比利亚半岛很常见的宗教迫害，他自己并没有多少十字军战士的性格，他像对待基督徒一样对待犹太人。但他是一个冷酷无情，讲究实际的人，当然也不惜乘人之危，从中牟利。西班牙驱逐犹太人后，若奥主张犹太人只要付出一笔高昂代价，可以暂时到葡萄牙居住。这时的葡萄牙和西班牙没有太多利益上的冲突，两国关系很一般。然而后来两国关系直转而下二.若奥也许是以拒绝支持哥伦布而在历史上最为人熟悉的。哥伦布之后受到了西班牙的资助，他在航行过程中宣布新大陆属于西班牙。而在若奥看来，这违反了《阿尔卡索瓦丝》条约。得知若奥有...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/10/22/vscodeDebugger/" title="vscodeDebugger">
+                    <div class="prevTitle">vscodeDebugger</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&#60; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &#62;</a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -745,6 +524,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1370,6 +1167,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

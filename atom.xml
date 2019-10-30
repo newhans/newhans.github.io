@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-22T15:38:19.551Z</updated>
+  <updated>2019-10-30T13:51:42.419Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件工程基础</title>
+    <link href="http://yoursite.com/2019/10/30/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2019/10/30/软件工程基础/</id>
+    <published>2019-10-30T11:52:56.000Z</published>
+    <updated>2019-10-30T13:51:42.419Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一章 软件工程概述：<br>1.支持软件工程的根基在于 质量关注点<br>2.软件工程实践的一个重要原则是存在价值，是指：软件能够给用户提供价值</p><p>第二章<br>1.软件过程模型中定义的框架活动是： 可以迭代的<br>2.统一过程（UP） 是迭代和增量式模型<br>3.增量模型： 在前面增量的基础上开发后面的增量，采用迭代的方式<br>4.敏捷模型，原型模型，瀑布模型属于软件过程模型<br>  迭代模型不属于软件过程模型<br>5.敏捷开发不是严谨正式的方法<br>6.敏捷开发：要写文档<br>           采用增量式开发和短周期交付，以便及时响应变化<br>7.在需求不稳定的情况下，尽量采用增量式开发<br>8.同一软件组织不应该只采用一种软件过程模型<br>9.分析 不属于过程共同活动<br>10.软件构造不属于瀑布模型活动<br>   测试和维护属于瀑布模型活动<br>11.如果软件开发过程中使用增量模型，第一个增量 可以变动<br>                                            满足基本要求<br>                                            往往是核心产品<br>                                            不一定正确<br>12.高效性不是瀑布模型的特点<br>   瀑布模型的特点：依赖性，顺序性，推迟实现<br>13.原型模型不适用于小而可用的项目<br>    原型模型容易让设计者在质量和原型间有所折中，让客户意识不到一些质量问题<br>14.螺旋模型适用于大型复杂的软件项目<br>15.增量模型不适用于技术成熟的项目<br>           每个增量的开发不是嵌套式增量方式</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第一章 软件工程概述：&lt;br&gt;1.支持软件工程的根基在于 质量关注点&lt;br&gt;2.软件工程实践的一个重要原则是存在价值，是指：软件能够给用户提供价值&lt;/p&gt;
+&lt;p&gt;第二章&lt;br&gt;1.软件过程模型中定义的框架活动是： 可以迭代的&lt;br&gt;2.统一过程（UP） 是迭代和增量式模型&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="EXAM" scheme="http://yoursite.com/tags/EXAM/"/>
+    
+  </entry>
   
   <entry>
     <title>vscodeDebugger</title>
@@ -479,20 +503,6 @@
       
         &lt;p&gt;1.《葡萄牙史》第四章中，哪些史实可以反映葡萄牙和西班牙的国家关系？&lt;br&gt;一.葡萄牙的君主若奥不大参与当时在伊比利亚半岛很常见的宗教迫害，他自己并没有多少十字军战士的性格，他像对待基督徒一样对待犹太人。但他是一个冷酷无情，讲究实际的人，当然也不惜乘人之危，从中牟利。西班牙
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>大国兴衰史.md</title>
-    <link href="http://yoursite.com/2019/09/07/%E5%A4%A7%E5%9B%BD%E5%85%B4%E8%A1%B0%E5%8F%B2-md/"/>
-    <id>http://yoursite.com/2019/09/07/大国兴衰史-md/</id>
-    <published>2019-09-07T00:57:18.000Z</published>
-    <updated>2019-09-07T00:57:18.750Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
